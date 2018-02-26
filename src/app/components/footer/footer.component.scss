@@ -1,0 +1,21 @@
+footer {
+  align-items: center;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  display: flex;
+  flex-direction: column;
+  height: 75px;
+  justify-content: center;
+  width: 100vw;
+
+  div {
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: .6px;
+  }
+
+  span {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: .6px;
+  }
+}

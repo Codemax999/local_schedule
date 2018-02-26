@@ -1,0 +1,44 @@
+@import "../../../styles";
+
+// --- Hide Scrollbar ---
+::-webkit-scrollbar { 
+    display: none; 
+}
+
+// --- Category Titles ---
+h4 {
+  @extend %results-header;
+}
+
+// --- Timeline ---
+.timeline-initial {
+  opacity: 0;
+}
+
+.timeline {
+  margin-top: 20px;
+  overflow-x: hidden;
+
+  // large and up
+  @include mq(medium) { 
+    height: 100%;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+  } 
+}
+
+.tile-centered {
+  font-weight: 300;
+  margin: 20px 0;
+  width: 91vw;
+}
+
+.tile-title {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.tile-subtitle {
+  letter-spacing: .5px;
+  margin-top: 4px;
+}

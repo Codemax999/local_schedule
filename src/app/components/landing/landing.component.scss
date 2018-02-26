@@ -1,0 +1,37 @@
+@import "../../../styles";
+
+
+article {
+  display: flex;
+  flex-direction: column;
+  height: 70vh;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 1000px;
+  padding: 0 20px;
+
+  h3 {
+    color: $primary;
+    font-weight: 700;
+    letter-spacing: .5px;
+    transition: font-size 1s;
+  }
+
+  h5 {
+    font-weight: 200;
+    letter-spacing: .5px;
+    padding-bottom: 20px;
+    transition: font-size 1s;
+  }
+
+  // medium and up
+  @include mq(large) {
+     h3 {
+       font-size: 50px !important;
+     }
+
+     h5 {
+       font-size: 40px !important;
+     }
+  }
+}

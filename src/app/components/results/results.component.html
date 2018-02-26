@@ -1,0 +1,33 @@
+<section class="container">
+
+  <!-- Loading -->
+  <div class="loading loading-lg" 
+    *ngIf="displayLoading">
+  </div>
+  
+  
+  <!-- Empty State -->
+  <app-empty class="empty-container" 
+    *ngIf="!schedule.length && !displayLoading">
+  </app-empty>
+
+
+  <!-- Results -->
+  <div class="columns" *ngIf="schedule.length">
+
+    <!-- Venues -->
+    <app-venues class="col-sm-12 col-6"
+      *ngIf="schedule.length"
+      [venues]="venues"
+      [schedule]="schedule">
+    </app-venues>
+
+
+    <!-- Schedule -->
+    <app-timeline class="col-sm-12 col-6"
+      *ngIf="schedule.length" 
+      [schedule]="schedule">
+    </app-timeline>
+
+  </div>
+</section>

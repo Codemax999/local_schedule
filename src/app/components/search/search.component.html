@@ -1,0 +1,21 @@
+<!-- Search -->
+<form [formGroup]="form">
+  <div class="input-group has-icon-left" [ngClass]="{'header-input': isHeader()}">
+
+    <input class="form-input" 
+      type="text" 
+      placeholder="Try 'Fort Lauderdale'" 
+      formControlName="city" 
+      [(ngModel)]="city">
+
+    <i class="form-icon icon icon-search"></i>
+
+    <button class="btn btn-primary input-group-btn" 
+      type="button" 
+      [routerLink]="['results']" 
+      [queryParams]="{city: city}"
+      (click)="setCity(city)">
+      Search
+    </button>
+  </div>
+</form>

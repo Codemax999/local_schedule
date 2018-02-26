@@ -1,0 +1,37 @@
+@import "../../../styles";
+
+// --- Suggested Cities ---
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h4 {
+  font-weight: 700;
+  letter-spacing: .5px;
+  transition: font-size 1s;
+
+  // medium and up
+  @include mq(medium) {
+    font-size: 30px !important;
+  }
+}
+
+article {
+  @extend %side-swipe;
+  height: 180px;
+
+  div {
+    @extend %image-text;
+    height: 150px;
+    min-width: 225px;
+
+    span {
+      font-size: 25px;
+      font-weight: 300;
+    }
+  }
+}

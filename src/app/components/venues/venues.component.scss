@@ -1,0 +1,65 @@
+@import "../../../styles";
+
+// --- Hide Scrollbar ---
+::-webkit-scrollbar { 
+    display: none; 
+}
+
+// --- Category Titles ---
+h4 {
+  @extend %results-header;
+}
+
+// --- Badge ---
+.badge {
+  white-space: normal;
+}
+
+.badge[data-badge]::after {
+  position: absolute;
+  top: 5px;
+  right: 0;
+}
+
+// --- Venues ---
+article {
+  @extend %side-swipe;
+  height: 130px;
+  opacity: 0;
+
+  div {
+    @extend %image-text;
+    height: 100px;
+    max-width: 44%;
+    min-width: 200px;
+    width: 100%;
+
+    span {
+      font-size: 15px;
+      font-weight: 500;
+      text-align: center;
+    }
+  }
+
+  // medium and up
+  @include mq(medium) { 
+    align-items: flex-start;
+    flex-wrap: wrap;
+    height: 100vh;
+    margin-top: 20px;
+    overflow: scroll;
+    
+    div {
+      margin: 7px;
+      max-width: 100%;
+    }
+  } 
+
+  @include mq(large) {
+
+    div {
+      max-width: 150px;
+      min-width: 45%;
+    }
+  }
+}

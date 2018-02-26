@@ -1,0 +1,22 @@
+<!-- List of Venues -->
+<h4>Venues</h4>
+<article class="venues-container">
+  
+  <div class="badge" 
+    id="venue-{{ x.id }}"
+    data-badge=""
+    *ngFor="let x of venues" 
+    (click)="showModal(x)">
+
+    <img [src]="x.img" alt="x.name">
+    <span>{{ x.name }}</span>
+
+  </div>
+</article>
+
+
+<!--- Selected Venue -->
+<app-modal [modalName]="modalName"
+  [modalPlace]="modalPlace"
+  [modalSchedule]="modalSchedule">
+</app-modal>

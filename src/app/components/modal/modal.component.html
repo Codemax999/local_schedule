@@ -1,0 +1,40 @@
+<div class="modal">
+
+  <!-- Backdrop -->
+  <a class="modal-overlay" 
+    aria-label="Close" 
+    (click)="closeModal()">
+  </a>
+
+  <!-- Modal -->
+  <div class="modal-container">
+
+    <!-- Header -->
+    <div class="modal-header">
+      <a class="btn btn-clear float-right" 
+        aria-label="Close" 
+        (click)="closeModal()">
+      </a>
+      <div class="modal-title h5">{{ modalName }}</div>
+    </div>
+
+    <!-- Body -->
+    <div class="modal-body">
+      <div class="content">
+
+        <!-- Venue Timeline -->
+        <app-timeline class="col-md-12 col-6" 
+          *ngIf="modalSchedule.length" 
+          [schedule]="modalSchedule">
+        </app-timeline>
+
+        <!-- No Events -->
+        <app-empty *ngIf="!modalSchedule.length"></app-empty>
+
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="modal-footer">{{ modalPlace }}</div>
+  </div>
+</div>

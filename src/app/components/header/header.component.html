@@ -1,0 +1,19 @@
+<header class="navbar" [ngClass]="{'search': searchBar()}">
+
+  <!-- Logo / Return to Home -->
+  <section class="navbar-logo">
+
+    <img src="assets/schedule.svg" 
+      [routerLink]="['/']"
+      (click)="resetCity()">
+
+  </section>
+
+
+  <!-- Search Bar for Results page -->
+  <section class="navbar-section" *ngIf="searchBar()">
+
+    <app-search class="col-md-12 col-6"></app-search>
+
+  </section>
+</header>

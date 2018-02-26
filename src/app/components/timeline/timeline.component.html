@@ -1,0 +1,30 @@
+<!-- Timeline -->
+<h4>Schedule</h4>
+<div class="timeline">
+
+  <div class="timeline-item" *ngFor="let x of schedule">
+    <div class="timeline-left">
+      <div class="timeline-icon"></div>
+    </div>
+
+    <div class="timeline-content">
+
+      <!-- date -->
+      <span class="text-primary">{{ x.date | date }}</span>
+
+      <!-- Booked Events -->
+      <div class="booked-events" *ngFor="let e of x.events; let i = index">
+
+        <!-- Booled Event Details -->
+        <div class="tile tile-centered">
+          <div class="tile-content">
+            <p class="tile-title">
+              {{ e.start_time | date: 'shortTime' }} @ {{ e.place.name }}
+            </p>
+            <p class="tile-subtitle text-gray">{{ e.name }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
